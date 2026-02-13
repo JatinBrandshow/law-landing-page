@@ -6,7 +6,7 @@ const MainSection = () => {
             {/* BACKGROUND VIDEO */}
             <video
                 className="absolute inset-0 h-full w-full object-cover"
-                src="/video/accurate-video.mp4"
+                src="/video/law-video.mp4"
                 autoPlay
                 muted
                 loop
@@ -23,24 +23,24 @@ const MainSection = () => {
                         {/* LEFT CONTENT */}
                         <div className="lg:col-span-2 text-white">
                             <span className="inline-block rounded-full bg-yellow-400 px-4 py-1 text-sm font-semibold text-black">
-                                Admissions Open
+                                Admissions Open 2026
                             </span>
 
                             <h1 className="mt-5 text-4xl md:text-5xl xl:text-6xl font-bold leading-tight">
-                                B.Tech Programme
+                                Law Programmes
                             </h1>
 
                             <p className="mt-3 text-lg text-gray-200">
-                                Accurate Institute of Management & Technology Industry-Focused Engineering Education
+                                Accurate College of Law – Shaping Future Legal Professionals with Excellence & Ethics
                             </p>
 
                             {/* INFO CARDS */}
                             <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 {[
-                                    ["Programme Duration", "4 Years"],
-                                    ["Approval", "AICTE Approved"],
-                                    ["Specialisations", "CSE, ME, CE, ECE, EE"],
-                                    ["Eligibility", "10+2 with PCM (as per norms)"],
+                                    ["Programme Duration", "3 Years (LL.B) / 5 Years (B.A. LL.B)"],
+                                    ["Approval", "Bar Council of India (BCI) Approved"],
+                                    ["Programmes Offered", "LL.B & B.A. LL.B"],
+                                    ["Eligibility", "As per BCI & University Norms"],
                                 ].map(([title, value]) => (
                                     <div
                                         key={title}
@@ -55,19 +55,19 @@ const MainSection = () => {
                             {/* ADMISSION INFO */}
                             <div className="mt-8 max-w-sm overflow-hidden rounded-xl border border-white/20">
                                 <div className="bg-yellow-400 py-3 text-center font-semibold text-black">
-                                    B.Tech Admissions
+                                    Law Admissions
                                 </div>
                                 <div className="bg-white py-3 text-center font-medium text-gray-800">
-                                    Apply Early for Better Opportunities
+                                    Apply Early to Secure Your Seat
                                 </div>
                             </div>
                         </div>
 
                         {/* RIGHT FORM */}
                         <div className="rounded-2xl bg-white p-3 shadow-2xl">
-                            <div className="rounded-xl bg-green-600 p-2 text-white">
-                                <h3 className="text-xl font-semibold">Talk To An Expert</h3>
-                                <p className="text-sm opacity-90">Get guidance for B.Tech admissions</p>
+                            <div className="rounded-xl bg-green-700 p-2 text-white">
+                                <h3 className="text-xl font-semibold">Talk To Our Law Expert</h3>
+                                <p className="text-sm opacity-90">Get guidance for Law admissions</p>
                             </div>
 
                             <form className="mt-6 space-y-4 text-gray-400">
@@ -76,23 +76,20 @@ const MainSection = () => {
                                 <input className="w-full rounded-md border px-4 py-3 text-sm" placeholder="Phone*" />
 
                                 <select className="w-full rounded-md border px-4 py-3 text-sm">
-                                    <option>Select B.Tech Branch</option>
-                                    <option>Computer Science Engineering</option>
-                                    <option>Mechanical Engineering</option>
-                                    <option>Civil Engineering</option>
-                                    <option>Electronics & Communication</option>
-                                    <option>Electrical Engineering</option>
+                                    <option>Select Programme</option>
+                                    <option>LL.B (3 Years)</option>
+                                    <option>B.A. LL.B (5 Years)</option>
                                 </select>
 
                                 <select className="w-full rounded-md border px-4 py-3 text-sm">
-                                    <option>12th Board</option>
-                                    <option>CBSE</option>
-                                    <option>ICSE</option>
-                                    <option>State Board</option>
+                                    <option>Qualification</option>
+                                    <option>Graduation Completed</option>
+                                    <option>12th Appearing</option>
+                                    <option>12th Completed</option>
                                 </select>
 
                                 <select className="w-full rounded-md border px-4 py-3 text-sm">
-                                    <option>12th PCM Percentage</option>
+                                    <option>Percentage</option>
                                     <option>Above 90%</option>
                                     <option>75% - 90%</option>
                                     <option>60% - 75%</option>
@@ -108,7 +105,7 @@ const MainSection = () => {
                                     type="submit"
                                     className="w-full rounded-lg bg-yellow-400 py-3 font-semibold text-black transition hover:bg-yellow-500"
                                 >
-                                    Apply for B.Tech Counselling
+                                    Apply for Law Counselling
                                 </button>
                             </form>
                         </div>

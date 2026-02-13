@@ -2,49 +2,78 @@ import React from "react";
 
 const ProgrammeOverview = () => {
     return (
-        <>
-            <section className="py-6 bg-white">
-                <div className="mx-auto max-w-7xl px-6">
-                    <h2 className="text-4xl font-bold text-blue-950 font-serif">
-                        Programme Overview – B.Tech (Bachelor of Technology)
-                    </h2>
+        <section className="py-12 bg-white">
+            <div className="mx-auto max-w-7xl px-6">
+                
+                <h2 className="text-4xl font-bold text-blue-950 font-serif text-center">
+                    Programme Overview – Law Programmes
+                </h2>
 
-                    <div className="mt-6 space-y-4 text-gray-700 leading-relaxed">
-                        <p>
-                            The <strong>Bachelor of Technology (B.Tech)</strong> program at{" "}
-                            <strong>Accurate Institute of Management and Technology, Greater Noida</strong> is a
-                            four-year, full-time undergraduate engineering programme approved by <strong>AICTE</strong>{" "}
-                            and affiliated with{" "}
-                            <strong>Dr. A.P.J. Abdul Kalam Technical University (AKTU), Lucknow</strong>. Established in
-                            2006, the programme is designed to build a strong foundation in engineering principles while
-                            equipping students with industry-relevant skills and practical exposure.
+                <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    
+                    {/* BA LLB CARD */}
+                    <div className="rounded-2xl border border-blue-100 shadow-md p-8 hover:shadow-xl transition duration-300">
+                        <h3 className="text-2xl font-semibold text-blue-900">
+                            B.A. LL.B.
+                            <span className="block text-base font-medium text-gray-600">
+                                (Integrated 5-Year Programme)
+                            </span>
+                        </h3>
+
+                        <p className="mt-4 text-gray-700 text-sm leading-relaxed">
+                            Interdisciplinary study of social sciences and legal education including
+                            Political Science, Sociology, History, Economics, English along with
+                            Constitutional Law, Criminal Law, Civil Law, Corporate Law,
+                            Cyber Law, Banking Law and Environmental Law.
                         </p>
 
-                        <p>
-                            The curriculum is structured across <strong>eight semesters</strong>. The initial semesters
-                            focus on core engineering fundamentals, mathematics, and sciences, while the later semesters
-                            emphasize specialization subjects, advanced technologies, laboratory work, live projects,
-                            and internships. The programme promotes experiential learning through modern laboratories,
-                            industry-driven projects, national-level competitions, and value-added courses that bridge
-                            the gap between academic learning and current technological advancements.
-                        </p>
+                        <div className="mt-4 text-sm text-gray-700">
+                            <p><strong>Eligibility:</strong> 10+2 as per BCI norms</p>
 
-                        <p>
-                            With multiple specializations including{" "}
-                            <strong>
-                                Computer Science & Engineering, Artificial Intelligence & Machine Learning, Data
-                                Science, Internet of Things (IoT), Artificial Intelligence, Mechanical Engineering, and
-                                Electronics & Communication Engineering
-                            </strong>
-                            , the B.Tech programme prepares students for diverse career opportunities in engineering,
-                            technology, research, entrepreneurship, and higher studies. A strong placement ecosystem,
-                            industry collaborations, and a consistent placement track record make the programme an ideal
-                            choice for aspiring engineers.
-                        </p>
+                            <ul className="mt-3 space-y-1 list-disc ml-5 text-gray-600">
+                                <li>General – 45%</li>
+                                <li>OBC (UP) – 42%</li>
+                                <li>SC/ST (UP) – 40%</li>
+                                <li>OBC/SC/ST (Other States) – 45%</li>
+                            </ul>
+                        </div>
                     </div>
+
+                    {/* LLB CARD */}
+                    <div className="rounded-2xl border border-blue-100 shadow-md p-8 hover:shadow-xl transition duration-300">
+                        <h3 className="text-2xl font-semibold text-blue-900">
+                            LL.B.
+                            <span className="block text-base font-medium text-gray-600">
+                                (3-Year Programme)
+                            </span>
+                        </h3>
+
+                        <p className="mt-4 text-gray-700 text-sm leading-relaxed">
+                            Comprehensive coverage of Jurisprudence, Constitutional Law,
+                            Criminal Law, Civil Law, Corporate Law, Property Law,
+                            Banking Law and Environmental Law with strong focus
+                            on advocacy and research skills.
+                        </p>
+
+                        <div className="mt-4 text-sm text-gray-700">
+                            <p><strong>Eligibility:</strong> Graduation (10+2+3/4/5) as per BCI norms</p>
+
+                            <ul className="mt-3 space-y-1 list-disc ml-5 text-gray-600">
+                                <li>General – 45%</li>
+                                <li>OBC (UP) – 42%</li>
+                                <li>SC/ST (UP) – 40%</li>
+                                <li>OBC/SC/ST (Other States) – 45%</li>
+                            </ul>
+
+                            <p className="mt-3 text-xs text-gray-500">
+                                *Candidates with less than 45% in graduation but 45% or more in post-graduation are also eligible.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
-            </section>
-        </>
+            </div>
+        </section>
     );
 };
 

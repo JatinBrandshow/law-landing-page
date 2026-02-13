@@ -18,7 +18,7 @@ export default function HomePage() {
         <>
             <MainSection />
             <AboutUs />
-            <Accreditation />
+            {/* <Accreditation /> */}
             <ProgrammeOverview />
             <ProgrammeHighlights />
             <WhyUs />

@@ -13,16 +13,38 @@ import {
 } from "lucide-react";
 
 const features = [
-    { icon: Award, text: "Engineering Excellence Since 2006" },
-    { icon: BadgeCheck, text: "AICTE Approved & AKTU Affiliated" },
-    { icon: Trophy, text: "National & Regional Awards" },
-    { icon: BookOpenCheck, text: "Industry-Oriented Curriculum" },
-    { icon: FlaskConical, text: "Advanced Modern Laboratories" },
-    { icon: Building2, text: "Strong Industry–Institute Interface" },
-    { icon: Briefcase, text: "100% Placement Track Record" },
-    { icon: Users, text: "Holistic Student Development" },
-    { icon: UserStar, text: "Experienced & Dedicated Faculty" },
-    { icon: TreePine, text: "16+ Acre Green Campus" },
+    {
+        icon: Award,
+        title: "Academic Excellence",
+        description: "Experienced faculty, updated industry-vetted curriculum and a student-centric learning approach.",
+    },
+    {
+        icon: Trophy,
+        title: "Moot Court & Practical Training",
+        description: "Hands-on exposure through moot courts, legal aid clinics and internships with top law firms.",
+    },
+    {
+        icon: Building2,
+        title: "State-of-the-Art Infrastructure",
+        description: "Well-equipped library, smart classrooms and modern legal research facilities.",
+    },
+    {
+        icon: Users,
+        title: "Industry Connect & Expert Sessions",
+        description: "Regular interactions with judges, lawyers and legal professionals for real-world insights.",
+    },
+    {
+        icon: Briefcase,
+        title: "Placement & Career Support",
+        description:
+            "Dedicated placement cell ensuring opportunities in top law firms, corporate houses and judiciary.",
+    },
+    {
+        icon: UserStar,
+        title: "Holistic Development",
+        description:
+            "Emphasis on leadership, ethics and professional skills through seminars, debates and competitions.",
+    },
 ];
 
 const WhyUs = () => {
@@ -31,7 +53,7 @@ const WhyUs = () => {
             <div className="mx-auto max-w-350 px-6">
                 {/* Heading */}
                 <div className="max-w-3xl mb-7">
-                    <h2 className="text-4xl font-bold text-blue-950 font-serif">Why Accurate?</h2>
+                    <h2 className="text-4xl font-bold text-blue-950 font-serif">Why Choose Accurate College of Law?</h2>
                 </div>
 
                 {/* Grid */}
@@ -47,7 +69,7 @@ const WhyUs = () => {
                                     <Icon className="h-6 w-6 text-blue-950 group-hover:text-white transition" />
                                 </div>
 
-                                <p className="text-base font-semibold text-gray-900 leading-snug">{item.text}</p>
+                                <p className="text-base font-semibold text-gray-900 leading-snug">{item.title}</p>
                             </div>
                         );
                     })}

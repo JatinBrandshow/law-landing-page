@@ -17,25 +17,22 @@ const AboutUs = () => {
                     {/* LEFT CONTENT */}
                     <div className="w-full lg:w-7/12">
                         {/* Heading */}
-                        <h2 className="text-5xl font-bold text-white mb-2">About Accurate</h2>
-                        <p className="text-lg text-white/90 leading-relaxed mb-6">
-                            Accurate Institute of Management and Technology offers a B.Tech program designed to prepare
-                            students for real-world engineering challenges across multiple industries.
+                        <h2 className="text-5xl font-bold text-white mb-4">Accurate College of Law</h2>
+
+                        <p className="text-white/90 leading-relaxed mb-6">
+                            Accurate College of Law, Greater Noida, is recognized by CCS University Meerut and also
+                            approved by the Bar Council of India under section of AERS.
                         </p>
 
                         <p className="text-white/80 leading-relaxed mb-6">
-                            The four-year undergraduate program is structured across eight semesters, blending core
-                            engineering fundamentals with advanced specialization.
-                        </p>
-
-                        <p className="text-white/80 leading-relaxed mb-6">
-                            With experienced faculty, modern infrastructure, and strong placement support, students
-                            receive both academic excellence and career readiness.
+                            The college is committed to developing a competitive international environment through
+                            global legal consciousness in the community for realization of justice to the masses and the
+                            objectives embodied in the Constitution of India.
                         </p>
 
                         <p className="text-white/80 leading-relaxed">
-                            Accurate prepares graduates for success in engineering, technology, entrepreneurship, and
-                            leadership roles.
+                            We have highly educated, globally trained, and experienced national and international
+                            faculty members, alongside a motivated and dedicated group of learners.
                         </p>
                     </div>
 
