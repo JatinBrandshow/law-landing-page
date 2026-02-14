@@ -6,7 +6,7 @@ const MainSection = () => {
             {/* BACKGROUND VIDEO */}
             <video
                 className="absolute inset-0 h-full w-full object-cover"
-                src="/video/law-video.mp4"
+                src="/video/accurate-video.mp4"
                 autoPlay
                 muted
                 loop
