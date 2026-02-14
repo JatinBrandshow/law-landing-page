@@ -8,93 +8,90 @@ const FeeStructure = () => {
                 backgroundImage: "url('/img/accurate-landing-vector.webp')",
             }}
         >
-            {/* Background decorative elements */}
             <div className="absolute inset-0 bg-white/75 backdrop-blur-[2px]"></div>
 
-            {/* Content wrapper */}
             <div className="relative max-w-7xl mx-auto px-6">
                 {/* Heading */}
                 <div className="text-center mb-14">
                     <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-                        B.Tech Fee <span className="text-indigo-600">Structure</span>
+                        Law Programme <span className="text-indigo-600">Fee Structure</span>
                     </h2>
                     <p className="text-slate-600 max-w-2xl mx-auto">
-                        Detailed and transparent year-wise fee structure for B.Tech programs.
+                        Detailed and transparent year-wise fee structure for BA.LLB and LL.B programmes.
                     </p>
                 </div>
 
-                {/* Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {/* B.Tech Regular */}
+                    {/* BA.LLB */}
                     <div className="rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition-all p-8 bg-white">
                         <div className="flex justify-between items-start mb-6">
                             <div>
-                                <h3 className="text-2xl font-semibold text-slate-900">B.Tech</h3>
-                                <p className="text-slate-500">Duration: 4 Years</p>
+                                <h3 className="text-2xl font-semibold text-slate-900">BA.LLB</h3>
+                                <p className="text-slate-500">Duration: 5 Years</p>
                             </div>
                             <span className="px-4 py-1 rounded-full text-sm bg-indigo-50 text-indigo-600 font-medium">
-                                Regular
+                                Integrated Programme
                             </span>
                         </div>
 
                         <div className="mb-6">
                             <p className="text-slate-500 text-sm">Total Program Fee</p>
-                            <p className="text-3xl font-bold text-indigo-600">₹5,65,000</p>
+                            <p className="text-3xl font-bold text-indigo-600">₹5,25,000</p>
                         </div>
 
                         <div className="grid grid-cols-2 gap-4">
                             <div className="fee-pill">
                                 <span>1st Year</span>
-                                <strong>₹1,45,000</strong>
+                                <strong>₹1,25,000</strong>
                             </div>
                             <div className="fee-pill">
                                 <span>2nd Year</span>
-                                <strong>₹1,40,000</strong>
+                                <strong>₹1,00,000</strong>
                             </div>
                             <div className="fee-pill">
                                 <span>3rd Year</span>
-                                <strong>₹1,40,000</strong>
+                                <strong>₹1,00,000</strong>
                             </div>
                             <div className="fee-pill">
                                 <span>4th Year</span>
-                                <strong>₹1,40,000</strong>
+                                <strong>₹1,00,000</strong>
+                            </div>
+                            <div className="fee-pill col-span-2">
+                                <span>5th Year</span>
+                                <strong>₹1,00,000</strong>
                             </div>
                         </div>
                     </div>
 
-                    {/* B.Tech Lateral */}
+                    {/* LL.B */}
                     <div className="rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition-all p-8 bg-white">
                         <div className="flex justify-between items-start mb-6">
                             <div>
-                                <h3 className="text-2xl font-semibold text-slate-900">B.Tech (Lateral Entry)</h3>
+                                <h3 className="text-2xl font-semibold text-slate-900">LL.B</h3>
                                 <p className="text-slate-500">Duration: 3 Years</p>
                             </div>
                             <span className="px-4 py-1 rounded-full text-sm bg-emerald-50 text-emerald-600 font-medium">
-                                Lateral
+                                Graduate Programme
                             </span>
                         </div>
 
                         <div className="mb-6">
                             <p className="text-slate-500 text-sm">Total Program Fee</p>
-                            <p className="text-3xl font-bold text-emerald-600">₹3,45,000</p>
+                            <p className="text-3xl font-bold text-emerald-600">₹2,65,000</p>
                         </div>
 
                         <div className="grid grid-cols-2 gap-4">
-                            <div className="fee-pill opacity-50">
+                            <div className="fee-pill">
                                 <span>1st Year</span>
-                                <strong>—</strong>
+                                <strong>₹95,000</strong>
                             </div>
                             <div className="fee-pill">
                                 <span>2nd Year</span>
-                                <strong>₹1,15,000</strong>
+                                <strong>₹85,000</strong>
                             </div>
-                            <div className="fee-pill">
+                            <div className="fee-pill col-span-2">
                                 <span>3rd Year</span>
-                                <strong>₹1,15,000</strong>
-                            </div>
-                            <div className="fee-pill">
-                                <span>4th Year</span>
-                                <strong>₹1,15,000</strong>
+                                <strong>₹85,000</strong>
                             </div>
                         </div>
                     </div>
@@ -105,7 +102,6 @@ const FeeStructure = () => {
                 </p>
             </div>
 
-            {/* Fee pill style */}
             <style jsx>{`
                 .fee-pill {
                     display: flex;

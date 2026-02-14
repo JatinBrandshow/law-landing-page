@@ -19,70 +19,64 @@ import {
 /* ===== HIGHLIGHTS DATA ===== */
 const highlights = [
     {
-        icon: GraduationCap,
-        title: "AICTE Approved & AKTU Affiliated",
-        description:
-            "Four-year full-time B.Tech program approved by AICTE and affiliated to Dr. A.P.J. Abdul Kalam Technical University (AKTU), Lucknow.",
-    },
-    {
-        icon: Award,
-        title: "Established Since 2006",
-        description:
-            "A well-established engineering program with a strong academic legacy and increasing intake reflecting student trust.",
-    },
-    {
         icon: BookOpen,
-        title: "Industry-Relevant Specializations",
+        title: "PCSJ Exam Preparation Support",
         description:
-            "Choice of specializations including CSE, AI & ML, Data Science, IoT, Artificial Intelligence, Mechanical Engineering, and ECE.",
-    },
-    {
-        icon: FileCheck2,
-        title: "8-Semester Curriculum Structure",
-        description:
-            "Curriculum designed across eight semesters with a balance of core engineering fundamentals, specialization subjects, labs, and projects.",
-    },
-    {
-        icon: FlaskConical,
-        title: "Advanced Engineering Laboratories",
-        description:
-            "Advanced laboratories with industry-oriented equipment providing real-world exposure through modern engineering labs.",
-    },
-    {
-        icon: Briefcase,
-        title: "Experiential Learning Approach",
-        description:
-            "Strong focus on experiential learning through live projects, internships, national-level engineering competitions, and industry problem-solving.",
-    },
-    {
-        icon: TrendingUp,
-        title: "Value-Added Courses",
-        description:
-            "Value-added courses beyond the university syllabus to bridge the gap between academics and emerging technologies.",
+            "In-house academic tie-ups and mentoring support for students preparing for the PCSJ examination alongside their law studies.",
     },
     {
         icon: Users,
-        title: "Holistic Student Development",
+        title: "Skill Development Cell",
         description:
-            "Emphasis on holistic development through soft skills training, seminars, mini-projects, and personality development programs.",
+            "Dedicated Skill Development Cell focused on enhancing communication, professional skills, and employability readiness.",
+    },
+    {
+        icon: FlaskConical,
+        title: "Research & Development Cell",
+        description:
+            "Active Research and Development Cell promoting interdisciplinary research aptitude and academic innovation among students.",
+    },
+    {
+        icon: Briefcase,
+        title: "Internship Training Programmes",
+        description:
+            "Structured internship training programmes ensuring practical exposure to legal practice, courts, and law firms.",
     },
     {
         icon: Building2,
-        title: "Strong Placement Record",
+        title: "Campus Recruitment & Training Support",
         description:
-            "Consistent placement performance with a 100% placement track record and opportunities for domestic and international roles.",
+            "Dedicated campus recruitment cell providing professional training, placement facilitation, and career guidance.",
+    },
+    {
+        icon: TrendingUp,
+        title: "Customized Career Training",
+        description:
+            "Customized professional training modules designed according to students’ chosen legal career paths.",
+    },
+    {
+        icon: GraduationCap,
+        title: "Student Choice-Based Opportunities",
+        description:
+            "Flexible opportunities allowing students to choose specialization tracks and professional growth pathways.",
+    },
+    {
+        icon: Award,
+        title: "Certification & Personality Development Courses",
+        description:
+            "Additional certification courses to enhance personality, communication skills, and professional confidence.",
     },
     {
         icon: Globe,
-        title: "Training & Placement Cell",
+        title: "Regular Court & Legal Visits",
         description:
-            "Dedicated Training & Placement Cell fostering strong industry–institute interaction, industry visits, workshops, and pre-placement counseling.",
+            "Frequent court visits, legal institution exposure, and field-based learning to connect theory with practice.",
     },
     {
-        icon: Building2,
-        title: "Green 16+ Acre Campus",
+        icon: FileCheck2,
+        title: "National & International Academic Exposure",
         description:
-            "Green 16+ acre campus with modern infrastructure, sports facilities, and a vibrant student life supporting overall growth.",
+            "Participation in seminars, moot courts, workshops, conferences, essay competitions, and guest lectures at national and international levels.",
     },
 ];
 
