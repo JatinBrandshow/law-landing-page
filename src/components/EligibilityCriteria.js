@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 const EligibilityCriteria = () => {
-    const [activeTab, setActiveTab] = useState("regular"); // default tab
+    const [activeTab, setActiveTab] = useState("ballb"); // default tab
 
     return (
         <section className="bg-[#f5f8ff]">
@@ -18,93 +18,101 @@ const EligibilityCriteria = () => {
                         {/* TABS */}
                         <div className="flex gap-6 border-b border-white/20 mb-8">
                             <button
-                                onClick={() => setActiveTab("regular")}
+                                onClick={() => setActiveTab("ballb")}
                                 className={`pb-3 text-lg font-semibold transition
                                     ${
-                                        activeTab === "regular"
+                                        activeTab === "ballb"
                                             ? "text-blue-400 border-b-2 border-blue-400"
                                             : "text-gray-300 hover:text-white"
                                     }`}
                             >
-                                Regular Entry (1st Year)
+                                BA.LLB Eligibility
                             </button>
 
                             <button
-                                onClick={() => setActiveTab("lateral")}
+                                onClick={() => setActiveTab("llb")}
                                 className={`pb-3 text-lg font-semibold transition
                                     ${
-                                        activeTab === "lateral"
+                                        activeTab === "llb"
                                             ? "text-blue-400 border-b-2 border-blue-400"
                                             : "text-gray-300 hover:text-white"
                                     }`}
                             >
-                                Lateral Entry (2nd Year)
+                                LL.B Eligibility
                             </button>
                         </div>
 
                         {/* CONTENT */}
                         <div className="grid md:grid-cols-2 gap-8 text-sm text-gray-200">
-                            {/* REGULAR ENTRY */}
-                            {activeTab === "regular" && (
+                            {/* BALLB ENTRY */}
+                            {activeTab === "ballb" && (
                                 <>
                                     <div className="flex gap-4 md:col-span-2">
                                         <span className="w-3 h-3 mt-2 rounded-full bg-blue-500 shrink-0"></span>
                                         <p>
-                                            Candidates must have passed Intermediate (10+2) examination from U.P. Board
-                                            or any recognized board/university.
+                                            Candidates must have passed Class 12 (10+2) from a recognized board in any
+                                            stream.
                                         </p>
                                     </div>
 
                                     <div className="flex gap-4">
                                         <span className="w-3 h-3 mt-2 rounded-full bg-blue-500 shrink-0"></span>
                                         <p>
-                                            Mathematics and Physics are compulsory subjects in the qualifying
-                                            examination.
+                                            Minimum 45% aggregate marks required (42% for OBC and 40% for SC/ST
+                                            candidates).
                                         </p>
                                     </div>
 
                                     <div className="flex gap-4">
                                         <span className="w-3 h-3 mt-2 rounded-full bg-blue-500 shrink-0"></span>
                                         <p>
-                                            Candidates must have studied any one of the following as an optional
-                                            subject: Chemistry, Biotechnology, Computer Science, or Biology.
+                                            Candidates should meet eligibility norms prescribed by CCS University and
+                                            Bar Council of India (BCI).
                                         </p>
                                     </div>
 
                                     <div className="flex gap-4 md:col-span-2">
                                         <span className="w-3 h-3 mt-2 rounded-full bg-blue-500 shrink-0"></span>
                                         <p>
-                                            Admission is subject to fulfillment of minimum eligibility norms as
-                                            prescribed by AKTU and AICTE from time to time.
+                                            Admission may be based on merit, entrance criteria, or university
+                                            guidelines.
                                         </p>
                                     </div>
                                 </>
                             )}
 
-                            {/* LATERAL ENTRY */}
-                            {activeTab === "lateral" && (
+                            {/* LLB ENTRY */}
+                            {activeTab === "llb" && (
                                 <>
                                     <div className="flex gap-4">
                                         <span className="w-3 h-3 mt-2 rounded-full bg-blue-500 shrink-0"></span>
                                         <p>
-                                            Candidates must have completed a three-year Diploma in Engineering with a
-                                            minimum of 50% aggregate marks.
+                                            Candidates must have completed graduation in any discipline from a
+                                            recognized university.
                                         </p>
                                     </div>
 
                                     <div className="flex gap-4">
                                         <span className="w-3 h-3 mt-2 rounded-full bg-blue-500 shrink-0"></span>
                                         <p>
-                                            OR candidates must have completed a three-year B.Sc. degree with Mathematics
-                                            as one of the subjects and secured a minimum of 50% aggregate marks.
+                                            Minimum 45% aggregate marks required (42% for OBC and 40% for SC/ST
+                                            candidates).
                                         </p>
                                     </div>
 
                                     <div className="flex gap-4 md:col-span-2">
                                         <span className="w-3 h-3 mt-2 rounded-full bg-blue-500 shrink-0"></span>
                                         <p>
-                                            Lateral entry admissions are subject to availability of seats and university
-                                            norms.
+                                            Candidates must satisfy eligibility norms set by CCS University and Bar
+                                            Council of India (BCI).
+                                        </p>
+                                    </div>
+
+                                    <div className="flex gap-4 md:col-span-2">
+                                        <span className="w-3 h-3 mt-2 rounded-full bg-blue-500 shrink-0"></span>
+                                        <p>
+                                            Admission is subject to document verification and university admission
+                                            policies.
                                         </p>
                                     </div>
                                 </>
@@ -133,3 +141,4 @@ const EligibilityCriteria = () => {
 };
 
 export default EligibilityCriteria;
+    

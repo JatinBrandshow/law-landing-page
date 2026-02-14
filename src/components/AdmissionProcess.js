@@ -13,28 +13,28 @@ const AdmissionProcess = () => {
             icon: FileText,
             title: "Check Eligibility & Apply",
             description:
-                "Ensure eligibility as per AKTU & AICTE guidelines and submit the application form with required academic documents.",
+                "Candidates must meet BA.LLB or LL.B eligibility criteria and submit the application form with academic records and required documents.",
             color: "from-blue-600 to-cyan-600",
         },
         {
             icon: ClipboardCheck,
-            title: "Merit-Based Evaluation",
+            title: "Entrance Score / Merit Review",
             description:
-                "Admissions are conducted strictly on a merit basis through the university-approved admission process.",
+                "Admission may be based on academic performance, university merit, or scores from law entrance exams such as CLAT, LSAT–India, AILET, SLAT, IPU CET, DU LL.B Entrance, etc.",
             color: "from-purple-600 to-pink-600",
         },
         {
             icon: UserCheck,
-            title: "Counselling & Verification",
+            title: "Personal Interview & Verification",
             description:
-                "Shortlisted candidates go through counselling, document verification, and seat allotment as per AKTU norms.",
+                "Shortlisted applicants are invited for personal interaction, counselling, and document verification as per university admission norms.",
             color: "from-orange-600 to-red-600",
         },
         {
             icon: IndianRupee,
-            title: "Fee Submission & Confirmation",
+            title: "Admission Confirmation",
             description:
-                "Admission is confirmed after fee submission and completion of university formalities with full institute support.",
+                "Admission is confirmed after successful verification and fee submission, followed by completion of university enrollment formalities.",
             color: "from-green-600 to-emerald-600",
         },
     ];
@@ -64,7 +64,7 @@ const AdmissionProcess = () => {
                         initial={{ opacity: 0, y: 30 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.6 }}
-                        className="mb-16 text-center"
+                        className="mb-8 text-center"
                     >
                         <motion.div
                             initial={{ opacity: 0, scale: 0.5 }}
@@ -83,13 +83,14 @@ const AdmissionProcess = () => {
                         </h2>
 
                         <p className="mx-auto max-w-3xl text-xl text-gray-600">
-                            Admission to the B.Tech programme is conducted on a merit basis as per AKTU and AICTE
-                            guidelines, ensuring a transparent and student-friendly process.
+                            Admission to BA.LLB and LL.B programmes is based on academic merit, university guidelines,
+                            scores from national or state-level law entrance examinations, and performance in the
+                            personal interview.
                         </p>
                     </motion.div>
 
                     {/* Process Steps */}
-                    <div className="mb-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                    <div className="mb-4 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
                         {steps.map((step, index) => (
                             <motion.div
                                 key={index}
@@ -99,7 +100,7 @@ const AdmissionProcess = () => {
                                 className="relative"
                             >
                                 <motion.div
-                                    className="group relative h-full overflow-hidden rounded-3xl bg-white p-8 shadow-xl"
+                                    className="group relative h-full overflow-hidden rounded-3xl bg-white p-5 shadow-xl"
                                     whileHover={{ y: -10, scale: 1.02 }}
                                     transition={{ duration: 0.3 }}
                                 >
