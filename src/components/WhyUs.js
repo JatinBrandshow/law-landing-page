@@ -10,6 +10,9 @@ import {
     Users,
     UserStar,
     TreePine,
+    Heart,
+    GraduationCap,
+    MapPin,
 } from "lucide-react";
 
 const features = [
@@ -44,6 +47,23 @@ const features = [
         title: "Holistic Development",
         description:
             "Emphasis on leadership, ethics and professional skills through seminars, debates and competitions.",
+    },
+    {
+        icon: MapPin,
+        title: "Strategic Location",
+        description:
+            "Situated in the heart of Greater Noida with excellent metro connectivity and a thriving educational environment.",
+    },
+    {
+        icon: GraduationCap,
+        title: "Merit-Based Scholarships",
+        description: "Various merit-based scholarships and financial aid options available for deserving students.",
+    },
+    {
+        icon: Heart,
+        title: "Special Girls Scholarship",
+        description:
+            "In line with the Beti Bachao, Beti Padhao initiative, exclusive scholarships are offered to support and empower female students in the legal profession.",
     },
 ];
 
