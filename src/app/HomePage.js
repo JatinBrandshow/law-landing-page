@@ -12,6 +12,7 @@ import AdmissionProcess from "@/components/AdmissionProcess";
 import OurRecruiters from "@/components/OurRecruiters";
 import EligibilityCriteria from "@/components/EligibilityCriteria";
 import FeeStructure from "@/components/FeeStructure";
+import LawCertifications from "@/components/LawCertifications";
 
 export default function HomePage() {
     return (
@@ -23,7 +24,8 @@ export default function HomePage() {
             <ProgrammeHighlights />
             <WhyUs />
             <ProgrammeCurriculum />
-            <BtechSpecializations />
+            {/* <BtechSpecializations /> */}
+            <LawCertifications />
             <ProgrammeDetails />
             <AdmissionProcess />
             <EligibilityCriteria />
