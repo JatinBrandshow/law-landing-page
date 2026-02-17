@@ -57,9 +57,14 @@ const MainSection = () => {
                                 <div className="bg-yellow-400 py-3 text-center font-semibold text-black">
                                     Law Admissions
                                 </div>
-                                <div className="bg-white py-3 text-center font-medium text-gray-800">
-                                    Apply Early to Secure Your Seat
-                                </div>
+                                <a
+                                    href="https://law.accurate.in/law-admissions/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block w-full bg-white py-3 text-center font-bold text-gray-900 transition-all hover:bg-gray-50 hover:text-blue-900 uppercase tracking-widest text-sm"
+                                >
+                                    Apply Now
+                                </a>
                             </div>
                         </div>
 

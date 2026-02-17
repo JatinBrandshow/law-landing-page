@@ -12,167 +12,179 @@ const ProgrammeDetails = () => {
                 <div className="grid grid-cols-2 border-b border-gray-300">
                     <button
                         onClick={() => setActiveTab("fit")}
-                        className={`text-4xl font-bold py-4 relative transition flex justify-center
-                            ${activeTab === "fit" ? "text-green-700" : "text-gray-900"}
+                        className={`text-2xl md:text-4xl font-bold py-4 relative transition flex justify-center
+                            ${activeTab === "fit" ? "text-yellow-600" : "text-gray-900"}
                         `}
                     >
                         Programme is Best Fit For?
                         {activeTab === "fit" && (
-                            <span className="absolute left-1/2 -bottom-1 h-1 w-full -translate-x-1/2 bg-green-700"></span>
+                            <span className="absolute left-1/2 -bottom-1 h-1 w-full -translate-x-1/2 bg-yellow-600"></span>
                         )}
                     </button>
 
                     <button
                         onClick={() => setActiveTab("learning")}
-                        className={`text-4xl font-bold py-4 relative transition flex justify-center
-                            ${activeTab === "learning" ? "text-green-700" : "text-gray-900"}
+                        className={`text-2xl md:text-4xl font-bold py-4 relative transition flex justify-center
+                            ${activeTab === "learning" ? "text-yellow-600" : "text-gray-900"}
                         `}
                     >
                         Programme Learnings
                         {activeTab === "learning" && (
-                            <span className="absolute left-1/2 -bottom-1 h-1 w-full -translate-x-1/2 bg-green-700"></span>
+                            <span className="absolute left-1/2 -bottom-1 h-1 w-full -translate-x-1/2 bg-yellow-600"></span>
                         )}
                     </button>
                 </div>
 
                 {/* Content */}
                 <div className="mt-10 text-gray-800">
-                    {/* TAB 1 CONTENT */}
-                    {/* TAB 1 CONTENT */}
+                    {/* TAB 1 CONTENT: Best Fit / Admissions / Eligibility */}
                     {activeTab === "fit" && (
                         <div className="space-y-6">
                             <div>
-                                <p className="font-semibold flex gap-2">
-                                    <span className="text-green-700 font-bold">|</span>
-                                    Ideal for students aspiring to build a strong foundation in engineering and
-                                    technology
+                                <p className="font-semibold text-lg flex gap-2">
+                                    <span className="text-yellow-600 font-bold">|</span>
+                                    Who can apply for BA LLB Course?
                                 </p>
-
                                 <ul className="list-disc pl-8 mt-3 space-y-2">
                                     <li>
-                                        Suitable for students who want to develop problem-solving skills, technical
-                                        knowledge, and practical exposure in their chosen engineering discipline.
+                                        Students must have received a minimum cumulative score of 50% on their 10+2 exam from an accredited board.
+                                    </li>
+                                    <li>
+                                        Students must have passed law entry exams at the national and university levels, such as the CLAT, LSAT, AILET, etc.
                                     </li>
                                 </ul>
                             </div>
 
                             <div>
-                                <p className="font-semibold flex gap-2">
-                                    <span className="text-green-700 font-bold">|</span>
-                                    Best suited for learners aiming for industry-ready engineering careers
+                                <p className="font-semibold text-lg flex gap-2">
+                                    <span className="text-yellow-600 font-bold">|</span>
+                                    Is CLAT necessary for BA LLB Admission?
                                 </p>
-
                                 <ul className="list-disc pl-8 mt-3 space-y-2">
                                     <li>
-                                        Designed for students seeking careers in IT, core engineering industries,
-                                        startups, R&D, entrepreneurship, and emerging technology domains.
+                                        No, studying for the CLAT is not required for the BA LLB. The SLAT, AILET, JMI BA LLB, and LSAT can also be used for BA LLB admission.
+                                    </li>
+                                    <li>
+                                        Candidates can take this exam if they want to enrol in top NLUs because NLUs only recognize CLAT scores.
                                     </li>
                                 </ul>
                             </div>
 
                             <div>
-                                <p className="font-semibold flex gap-2">
-                                    <span className="text-green-700 font-bold">|</span>
-                                    Ideal for students planning higher studies or global opportunities
+                                <p className="font-semibold text-lg flex gap-2">
+                                    <span className="text-yellow-600 font-bold">|</span>
+                                    Can a student benefit from a previous year’s CLAT score?
                                 </p>
-
                                 <ul className="list-disc pl-8 mt-3 space-y-2">
                                     <li>
-                                        Strong academic base and project exposure prepare students for M.Tech, MBA,
-                                        research programs, and international study opportunities.
+                                        No, CLAT scores are only eligible till the end of the academic year. Once the admission process is over, you will have to retake the exam for admission next year.
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <p className="font-semibold text-lg flex gap-2">
+                                    <span className="text-yellow-600 font-bold">|</span>
+                                    Can a student get direct admission to BA LLB?
+                                </p>
+                                <ul className="list-disc pl-8 mt-3 space-y-2">
+                                    <li>
+                                        Yes, you need not take any entrance exam in order to enrol in the 5-year BA LLB program. Due to the fact that some law schools in India grant admission to 5-year BA LLB programs on the basis of merit.
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     )}
 
-                    {/* TAB 2 CONTENT */}
+                    {/* TAB 2 CONTENT: Learnings / Reviews / Scope */}
                     {activeTab === "learning" && (
                         <div className="space-y-8">
-                            {/* Technical Knowledge & Core Skills */}
+                            {/* Course Overview */}
                             <div>
                                 <p className="font-semibold text-lg flex gap-2">
-                                    <span className="text-green-700 font-bold">|</span>
-                                    Strong Technical & Engineering Fundamentals
+                                    <span className="text-yellow-600 font-bold">|</span>
+                                    What is BA LLB Course?
                                 </p>
-
                                 <ul className="list-disc pl-8 mt-3 space-y-2">
                                     <li>
-                                        Gain in-depth understanding of core engineering subjects aligned with AKTU
-                                        curriculum.
+                                        B A LLB is a five-year undergraduate integrated degree program and is developed specifically to educate students on the socio-legal aspects of the law.
                                     </li>
                                     <li>
-                                        Develop logical thinking and analytical skills to solve real-world engineering
-                                        problems.
+                                        Multidisciplinary topics like Political Science, Sociology, Economics, and Constitutional Law are covered in this degree. Criminal law and family law.
+                                    </li>
+                                    <li>
+                                        The integrated program helps students gain a solid understanding of the topics and give students a foundation in law so they can relate to the social and political implications of various legislation.
                                     </li>
                                 </ul>
                             </div>
 
-                            {/* Practical Learning */}
+                            {/* Subjects */}
                             <div>
                                 <p className="font-semibold text-lg flex gap-2">
-                                    <span className="text-green-700 font-bold">|</span>
-                                    Practical & Experiential Learning
+                                    <span className="text-yellow-600 font-bold">|</span>
+                                    What are the main subjects in BA LLB?
                                 </p>
-
                                 <ul className="list-disc pl-8 mt-3 space-y-2">
-                                    <li>
-                                        Hands-on learning through modern laboratories, live projects, internships, and
-                                        industrial training.
-                                    </li>
-                                    <li>
-                                        Exposure to real industry scenarios through workshops, seminars, and industry
-                                        visits.
-                                    </li>
+                                    <li>Here are some of the popular topics you will learn in BA LLB syllabus:</li>
                                 </ul>
+                                <div className="pl-8 mt-2 grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2 text-sm md:text-base">
+                                    <ul className="list-disc pl-5 space-y-1">
+                                        <li>Criminal Law</li>
+                                        <li>Family Law</li>
+                                        <li>Political Science</li>
+                                        <li>Sociology</li>
+                                        <li>English</li>
+                                        <li>Jurisprudence</li>
+                                        <li>Constitutional Law</li>
+                                        <li>Taxation Laws</li>
+                                    </ul>
+                                    <ul className="list-disc pl-5 space-y-1">
+                                        <li>International Law</li>
+                                        <li>Cyber Laws</li>
+                                        <li>Labor Laws</li>
+                                        <li>Corporate Law</li>
+                                        <li>International Trade Law</li>
+                                        <li>Human Rights</li>
+                                        <li>International Humanitarian and Refugee Law</li>
+                                    </ul>
+                                </div>
                             </div>
 
-                            {/* Industry Readiness */}
+                            {/* Recruiters */}
                             <div>
                                 <p className="font-semibold text-lg flex gap-2">
-                                    <span className="text-green-700 font-bold">|</span>
-                                    Industry & Career Readiness
+                                    <span className="text-yellow-600 font-bold">|</span>
+                                    Which are the top recruiters for BA LLB?
                                 </p>
-
-                                <ul className="list-disc pl-8 mt-3 space-y-2">
-                                    <li>Learn industry-relevant tools, technologies, and best practices.</li>
-                                    <li>
-                                        Placement-focused training including aptitude, technical skills, and interview
-                                        preparation.
-                                    </li>
-                                </ul>
+                                <p className="pl-8 mt-2 mb-2 italic">Here are some of the top recruiters of BA LLB graduates in India:</p>
+                                <div className="pl-8 grid grid-cols-1 md:grid-cols-2 gap-2">
+                                    <ul className="list-disc space-y-1">
+                                        <li>AZB & Partners</li>
+                                        <li>Khaitan and Co.</li>
+                                        <li>Shardul Amarchand Mangaldas & Co.</li>
+                                        <li>Hammurabi and Solomon</li>
+                                    </ul>
+                                    <ul className="list-disc space-y-1">
+                                        <li>S&R Associates</li>
+                                        <li>Trilegal</li>
+                                        <li>Desai and Diwanji</li>
+                                        <li>Talwar Thakore and Associates</li>
+                                    </ul>
+                                </div>
                             </div>
 
-                            {/* Communication & Soft Skills */}
+                            {/* Distance Learning */}
                             <div>
                                 <p className="font-semibold text-lg flex gap-2">
-                                    <span className="text-green-700 font-bold">|</span>
-                                    Communication & Professional Skills
+                                    <span className="text-yellow-600 font-bold">|</span>
+                                    Can law be pursued in distance learning?
                                 </p>
-
                                 <ul className="list-disc pl-8 mt-3 space-y-2">
                                     <li>
-                                        Improve communication, teamwork, and leadership skills through presentations and
-                                        group projects.
-                                    </li>
-                                    <li>Build confidence for corporate environments and professional growth.</li>
-                                </ul>
-                            </div>
-
-                            {/* Innovation & Lifelong Learning */}
-                            <div>
-                                <p className="font-semibold text-lg flex gap-2">
-                                    <span className="text-green-700 font-bold">|</span>
-                                    Innovation, Ethics & Lifelong Learning
-                                </p>
-
-                                <ul className="list-disc pl-8 mt-3 space-y-2">
-                                    <li>
-                                        Develop ethical understanding, social responsibility, and sustainable
-                                        engineering practices.
+                                        Distance education in BA LLB is offered by numerous colleges and universities in India, including IGNOU, National Law University, ILS, and JMI New Delhi.
                                     </li>
                                     <li>
-                                        Foster innovation, creativity, and adaptability for long-term career success.
+                                        50% of the class 12 grade in any stream must have been earned in order to be eligible to apply for BA LLB Distance Education. Merit-based admissions are used in BA LLB distance learning colleges.
                                     </li>
                                 </ul>
                             </div>

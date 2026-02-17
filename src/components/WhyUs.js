@@ -83,13 +83,16 @@ const WhyUs = () => {
                         return (
                             <div
                                 key={index}
-                                className="group rounded-2xl bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex items-center gap-2"
+                                className="group rounded-2xl bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex flex-col gap-4 border border-gray-100"
                             >
-                                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-yellow-50 border border-yellow-200 group-hover:bg-blue-950 transition">
-                                    <Icon className="h-6 w-6 text-blue-950 group-hover:text-white transition" />
+                                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-50 border border-yellow-200 group-hover:bg-blue-950 transition-colors duration-300">
+                                    <Icon className="h-6 w-6 text-blue-950 group-hover:text-white transition-colors duration-300" />
                                 </div>
 
-                                <p className="text-base font-semibold text-gray-900 leading-snug">{item.title}</p>
+                                <div>
+                                    <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
+                                    <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+                                </div>
                             </div>
                         );
                     })}
