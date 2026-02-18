@@ -24,13 +24,7 @@ const Header = () => {
 
                     {/* Accreditation Logos (visible on all screens now) */}
                     <div className="flex items-center gap-3">
-                        <Image
-                            src="/img/accreditations/aicte-logo.webp"
-                            alt="AICTE Logo"
-                            width={50}
-                            height={50}
-                            className="object-contain shadow-md rounded max-sm:w-8"
-                        />
+                       
                         <Image
                             src="/img/accreditations/ccsu-logo.webp"
                             alt="CCSU Logo"
