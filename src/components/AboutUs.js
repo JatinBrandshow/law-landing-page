@@ -1,6 +1,58 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 
 const AboutUs = () => {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        programme: "",
+    });
+
+    const [loading, setLoading] = useState(false);
+    const [status, setStatus] = useState(null);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prev) => ({
+            ...prev,
+            [name]: value,
+        }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+        setStatus(null);
+
+        try {
+            const response = await fetch('/api/counselling', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setStatus('Application sent successfully!');
+                setFormData({
+                    name: "",
+                    email: "",
+                    phone: "",
+                    programme: "",
+                });
+            } else {
+                setStatus('Failed to send application. Please try again.');
+            }
+        } catch (error) {
+            console.error('Submission error:', error);
+            setStatus('An error occurred. Please try again later.');
+        } finally {
+            setLoading(false);
+        }
+    };
+
     return (
         <section
             className="relative py-20 overflow-hidden bg-cover bg-center"
@@ -45,53 +97,62 @@ const AboutUs = () => {
                                 Fill in the details and our team will contact you shortly.
                             </p>
 
-                            <form className="space-y-4">
+                            <form className="space-y-4" onSubmit={handleSubmit}>
                                 <input
                                     type="text"
+                                    name="name"
+                                    value={formData.name}
+                                    onChange={handleChange}
                                     placeholder="Full Name"
-                                    className="w-full bg-white/80 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-white"
+                                    className="w-full bg-white/80 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-white text-gray-900 placeholder-gray-500"
+                                    required
                                 />
 
                                 <input
                                     type="email"
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
                                     placeholder="Email Address"
-                                    className="w-full bg-white/80 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-white"
+                                    className="w-full bg-white/80 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-white text-gray-900 placeholder-gray-500"
+                                    required
                                 />
 
                                 <input
                                     type="tel"
+                                    name="phone"
+                                    value={formData.phone}
+                                    onChange={handleChange}
                                     placeholder="Mobile Number"
-                                    className="w-full bg-white/80 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-white"
+                                    className="w-full bg-white/80 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-white text-gray-900 placeholder-gray-500"
+                                    required
                                 />
 
-                                <select className="w-full bg-white/80 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-white">
-                                    <option value="">Select B.Tech Specialization</option>
-
-                                    <option value="cse">B.Tech in Computer Science & Engineering</option>
-
-                                    <option value="cse-ai-ml">
-                                        B.Tech in Computer Science & Engineering (AI & ML)
-                                    </option>
-
-                                    <option value="cse-data-science">
-                                        B.Tech in Computer Science & Engineering (Data Science)
-                                    </option>
-
-                                    <option value="cse-iot">B.Tech in Computer Science & Engineering (IOT)</option>
-
-                                    <option value="artificial-intelligence">B.Tech in Artificial Intelligence</option>
-
-                                    <option value="mechanical">B.Tech in Mechanical Engineering</option>
-
-                                    <option value="ece">B.Tech in Electronics & Communication Engineering</option>
+                                <select
+                                    name="programme"
+                                    value={formData.programme}
+                                    onChange={handleChange}
+                                    className="w-full bg-white/80 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-white text-gray-900"
+                                    required
+                                >
+                                    <option value="">Select Programme</option>
+                                    <option value="LL.B (3 Years)">LL.B (3 Years)</option>
+                                    <option value="B.A. LL.B (5 Years)">B.A. LL.B (5 Years)</option>
                                 </select>
 
                                 <button
                                     type="submit"
-                                    className="w-full bg-white text-[#1c2340] font-semibold py-3 rounded-lg hover:bg-gray-200 transition"
+                                    disabled={loading}
+                                    className="w-full bg-white text-[#1c2340] font-semibold py-3 rounded-lg hover:bg-gray-200 transition disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
-                                    Submit Enquiry
+                                    {loading ? 'Sending...' : 'Submit Enquiry'}
                                 </button>
+
+                                {status && (
+                                    <p className={`text-sm text-center mt-2 ${status.includes('successfully') ? 'text-green-300' : 'text-red-300'}`}>
+                                        {status}
+                                    </p>
+                                )}
                             </form>
 
                             <p className="text-xs text-white/70 mt-4 text-center">
