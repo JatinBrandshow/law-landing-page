@@ -29,7 +29,7 @@ export default function HomePage() {
             <ProgrammeDetails />
             <AdmissionProcess />
             <EligibilityCriteria />
-            <OurRecruiters />
+            {/* <OurRecruiters /> */}
             <FeeStructure />
         </>
     );

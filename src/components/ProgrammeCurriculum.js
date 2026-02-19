@@ -9,128 +9,179 @@ const curriculumData = {
             year: "Sem 1",
             title: "Foundation of Law",
             points: [
-                "101 Legal Method",
-                "103 Law of Contract-I",
-                "105 Legal English and Communication Skills",
-                "107 History-I",
-                "109 Sociology-I",
-                "Practical: 151* Comprehensive Viva",
+                "BL-1001 General English – I",
+                "BL-1002 Sociology – I",
+                "BL-1003 Political Science – I (Political Theory)",
+                "BL-1004 Economics – I",
+                "BL-1005 Indian History – I (Ancient And Modern Indian History)",
             ],
         },
         {
             year: "Sem 2",
             title: "Core Legal & Social Sciences",
             points: [
-                "201 Family Law-I",
-                "203 Constitutional Law-I",
-                "205 Law of Crimes-I",
-                "207 Economics-I",
-                "209 Political Science-II",
-                "Practical: 251* Comprehensive Viva",
+                "BL-2001 General English – II (English Language and Legal Writing)",
+                "BL-2002 Sociology – II",
+                "BL-2003 Political Science – II (International Relations)",
+                "BL-2004 Economics – II (Economic Problems and Policies in India)",
+                "BL-2005 Law of Torts And Consumer Protection",
             ],
         },
         {
             year: "Sem 3",
             title: "Advanced Legal Studies",
             points: [
-                "201 Family Law-I",
-                "203 Constitutional Law-I",
-                "205 Law of Crimes-I",
-                "207 Economics-I",
-                "209 Political Science-II",
-                "Practical: 251* Comprehensive Viva",
+                "BL-3001 General English – III (Communication Skills)",
+                "BL-3002 Hindi – I OR BL-3002(A) Law and Media – I",
+                "BL-3003 Political Science – III (Public Administration)",
+                "BL-3004 Contract – I (General Principles of Contract)",
+                "BL-3005 Indian Legal And Constitutional History",
             ],
         },
         {
             year: "Sem 4",
-            title: "Speciaized Laws",
+            title: "Specialized Laws",
             points: [
-                "202 Family Law-II",
-                "204 Constitutional Law-II",
-                "206 Law of Crimes-II",
-                "208 Administrative Law",
-                "210 Economics-II",
-                "Practical: 252* Comprehensive Viva",
+                "BL-4001 General English – IV",
+                "BL-4002 Hindi – 2 (Vidhik Sanchar Ev Hindi Bhasha Gyan) OR BL-4002(A) Law And Media – II",
+                "BL-4003 Political Science – IV (Indian Government And Politics)",
+                "BL-4004 Indian History – II (Modern Indian History)",
+                "BL-4005 Law of Human Rights",
             ],
         },
         {
             year: "Sem 5",
             title: "Procedural & Business Law",
             points: [
-                "301 Environmental Studies and Environmental Laws",
-                "303 Law of Evidence",
-                "305 Corporate Law",
-                "307 Code of Civil Procedure",
-                "309 Alternative Dispute Resolution (ADR)",
-                "Practical: 351* Comprehensive Viva and Summer Internship Assessment",
+                "BL-5001 Law of Crimes (Indian Penal Code)",
+                "BL-5002 Family Law – I (Hindu Law)",
+                "BL-5003 Constitutional Law of India – I (Nature of The Constitution And Fundamental Rights)",
+                "BL-5004 Contract – II (Specific Contract And Law of Partnership)",
+                "BL-5005 Jurisprudence – I (Legal Theory)",
             ],
         },
         {
             year: "Sem 6",
             title: "Jurisprudence & International Law",
             points: [
-                "302 Jurisprudence",
-                "304 International Law",
-                "306 Property Law",
-                "308 Investment and Competition Law",
-                "310 Code of Criminal Procedure",
-                "Practical: 352* Comprehensive Viva",
+                "BL-6001 Environmental Law",
+                "BL-6002 Family Law – II (Muslim Law)",
+                "BL-6003 Constitutional Law of India – II (Structure And Working of The Indian Constitution)",
+                "BL-6004 Public International Law",
+                "BL-6005 Jurisprudence – II (Legal Concepts)",
             ],
         },
         {
             year: "Sem 7",
             title: "Labour, Tax & Technology Law",
             points: [
-                "401 Labour Law-I",
-                "403 Tax Law",
-                "405 Law and Emerging Technologies",
-                "407 Human Rights",
-                "409 Seminar Paper-I",
-                "Practical: 451* Comprehensive Viva and Summer Internship Assessment",
+                "BL-7001 Labour And Industrial Law",
+                "BL-7002 Company Law",
+                "BL-7003 Interpretation of Statutes",
+                "BL-7004 Insurance Law And Accident Claims OR BL-7004(A) Criminology And Penology",
+                "BL-7005 Professional Ethics, Accountancy of Lawyers And Bar Bench Relation (Practical Training)",
             ],
         },
         {
             year: "Sem 8",
             title: "IPR & Trade Law",
             points: [
-                "402 Intellectual Property Rights",
-                "404 Labour Law-II",
-                "406 Interpretation of Statutes",
-                "408 International Trade Law",
-                "410 Seminar Paper-II",
-                "Practical: 452* Comprehensive Viva",
+                "BL-8001 Administrative Law",
+                "BL-8002 Law of Property And Easement",
+                "BL-8003 Intellectual Property Law OR BL-8003(A) Law Relating to Women And Child",
+                "BL-8004 Banking Law Including Negotiable Instrument Act",
+                "BL-8005 Arbitration, Conciliation And Alternate Dispute Resolution (Practical Training)",
+            ],
+        },
+        {
+            year: "Sem 9",
+            title: "Civil Procedural & Clinical Legal Education",
+            points: [
+                "BL-9001 Code of Civil Procedure - I",
+                "BL-9002 Code of Criminal Procedure - I",
+                "BL-9003 Law of Evidence",
+                "BL-9004 Consumer Protection Law and Competition Act",
+                "BL-9005 Drafting, Pleading, and Conveyancing (Practical Training)",
+            ],
+        },
+        {
+            year: "Sem 10",
+            title: "Land & Taxation Laws",
+            points: [
+                "BL-9006 Land Laws (U.P. Revenue Code, 2006)",
+                "BL-9007 Law of Taxation",
+                "BL-9008 Indian Judicial System OR BL-9008(A) Law of Trust, Equity And Fiduciary Relation",
+                "BL-9009 Law Relating To Right To Information OR BL-9009(A) Information Technology And Cyber Laws",
+                "BL-9010 Moot Court, Pre-Trial Preparations And Participation In Trial Proceedings (Practical Training)",
             ],
         },
     ],
     "LL.B": [
         {
-            year: "1st Year",
-            title: "Core Legal Fundamentals",
+            year: "Sem 1",
+            title: "Foundation of Law",
             points: [
-                "Constitutional Law",
-                "Law of Torts",
-                "Law of Crimes (IPC)",
-                "Contract Law",
+                "K-1001 Jurisprudence – I (Legal Theory)",
+                "K-1002 Constitutional Law of India – I (Nature of The Constitution And Fundamental Rights)",
+                "K-1003 Law of Torts",
+                "K-1004 Law of Crimes – I (Indian Penal Code)",
+                "K-1005 Contract – I (General Principles of Contract)",
             ],
         },
         {
-            year: "2nd Year",
-            title: "Procedural & Administrative Law",
+            year: "Sem 2",
+            title: "Core Legal & Social Sciences",
             points: [
-                "Administrative Law",
-                "Family Law",
-                "Property Law",
-                "Public International Law",
+                "K-2001 Jurisprudence – II (Legal Concepts)",
+                "K-2002 Constitutional Law of India – II (Structure And Working of the Indian Constitution)",
+                "K-2003 Family Law – I (Hindu Law)",
+                "K-2004 Contract – II (Specific Contract And Law of Partnership)",
+                "K-2005 Indian Legal And Constitutional History OR K-2006 Law of Taxation",
             ],
         },
         {
-            year: "3rd Year",
-            title: "Advanced Legal Studies & Practice",
+            year: "Sem 3",
+            title: "Advanced Legal Studies",
             points: [
-                "Code of Civil Procedure (CPC)",
-                "Code of Criminal Procedure (CrPC)",
-                "Law of Evidence",
-                "Moot Court & Internship",
+                "K-3001 Family Law – II (Muslim Law)",
+                "K-3002 Public International Law",
+                "K-3003 Administrative Law",
+                "K-3004 Law of Property And Easement",
+                "K-3005 Professional Ethics, Accountability of Lawyers and Bar Bench Relation (Practical Training)",
+            ],
+        },
+        {
+            year: "Sem 4",
+            title: "Specialized Laws",
+            points: [
+                "K-4001 Company Law",
+                "K-4002 Labour And Industrial Law",
+                "K-4003 Environmental Law",
+                "K-4004 Criminology And Penology OR K-4005 Law of Trust, Equity And Fiduciary Relation",
+                "K-4006 Banking Law Including Negotiable Instrument Act OR K-4007 Arbitration, Conciliation And Alternate Dispute Resolution (Practical Training)",
+            ],
+        },
+        {
+            year: "Sem 5",
+            title: "Procedural & Business Law",
+            points: [
+                "K-5001 Civil Procedure Code And Limitation Act",
+                "K-5002 Law of Crimes – II (Code of Criminal Procedure)",
+                "K-5003 Law of Evidence",
+                "K-5004 Land Laws Including Ceiling And Other Local Laws",
+                "K-5005 Drafting of Pleading And Conveyancing (Practical Training)",
+            ],
+        },
+        {
+            year: "Sem 6",
+            title: "Jurisprudence & International Law",
+            points: [
+                "K-6001 Interpretation of Statutes",
+                "K-6002 Legal Language and Legal Writing Including Proficiency In General English",
+                "K-6003 Law of Human Rights",
+                "K-6004 Intellectual Property Law OR K - 6005 Information Technology And Cyber Law",
+                "K-6006 Law Relating To Women And Child OR K-6007 Law Relating To Right To Information",
+                "K-6008 Moot Court, Pre-Trial Preparation And Participation In Trial Proceedings (Practical Training)",
             ],
         },
     ],
@@ -147,7 +198,7 @@ const ProgrammeCurriculum = () => {
             <section className="bg-white py-16">
                 <div className="mx-auto max-w-7xl px-6">
                     {/* Heading & Program Toggle */}
-                    <div className="mb-10 flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+                    <div className="mb-10 flex flex-col  justify-between gap-6 md:flex-row md:items-center">
                         <h2 className="text-4xl font-bold text-[#0b1c3f]">Programme Curriculum</h2>
 
                         {/* Program Buttons */}
@@ -159,7 +210,7 @@ const ProgrammeCurriculum = () => {
                                         setActiveProgram(program);
                                         setActiveTab(0); // Reset to 1st year on switch
                                     }}
-                                    className={`rounded-md px-6 py-2 text-sm font-semibold transition-all ${activeProgram === program
+                                    className={`rounded-md px-5 py-2 text-sm font-semibold transition-all ${activeProgram === program
                                         ? "bg-yellow-400 text-black shadow-sm"
                                         : "text-gray-600 hover:text-black"
                                         }`}
@@ -170,7 +221,7 @@ const ProgrammeCurriculum = () => {
                         </div>
                     </div>
 
-                    <div className="flex flex-col gap-14 lg:flex-row">
+                    <div className="flex flex-col gap-14 lg:flex-row lg:items">
                         {/* LEFT CONTENT – 65% */}
                         <div className="w-full lg:w-[65%]">
                             {/* Tabs */}
@@ -179,7 +230,7 @@ const ProgrammeCurriculum = () => {
                                     <button
                                         key={item.year}
                                         onClick={() => setActiveTab(index)}
-                                        className={`relative min-w-[80px] flex-1 whitespace-nowrap pb-4 text-center text-lg font-semibold transition-colors
+                                        className={`relative max-w-[100px] flex-1 whitespace-nowrap pb-2 text-center text-lg font-semibold transition-colors
                                             ${activeTab === index ? "text-black" : "text-gray-600 hover:text-black"}`}
                                     >
                                         {item.year}
@@ -192,7 +243,7 @@ const ProgrammeCurriculum = () => {
                             </div>
 
                             {/* Content */}
-                            <div className="mt-10 min-h-[200px]">
+                            <div className="mt-10 max-h-[250px]">
                                 <h4 className="relative mb-4 pl-4 text-lg font-semibold">
                                     <span className="absolute left-0 top-1 h-5 w-0.75 bg-yellow-400"></span>
                                     {currentCurriculum[activeTab].title}
@@ -200,13 +251,24 @@ const ProgrammeCurriculum = () => {
 
                                 <ul className="space-y-3 text-gray-800">
                                     {currentCurriculum[activeTab].points.map((point, i) => {
-                                        const isPractical = point.startsWith("Practical");
+                                        const isPractical = point.startsWith("Practical") || point.includes("(Practical Training)");
+                                        const parts = point.split(" OR ");
+
                                         return (
                                             <li key={i} className="flex items-start gap-3">
-                                                <span className={`mt-2 h-1.5 w-1.5 rounded-full ${isPractical ? "bg-red-600" : "bg-black"}`}></span>
-                                                <span className={isPractical ? "font-bold text-red-600" : ""}>
-                                                    {point}
-                                                </span>
+                                                <span className={`mt-2 h-1.5 w-1.5 shrink-0 rounded-full ${isPractical ? "bg-red-600" : "bg-black"}`}></span>
+                                                <div className="flex flex-col">
+                                                    {parts.map((part, index) => (
+                                                        <React.Fragment key={index}>
+                                                            <span className={isPractical ? "font-bold text-red-600" : ""}>
+                                                                {part.trim()}
+                                                            </span>
+                                                            {index < parts.length - 1 && (
+                                                                <span className="my-1 text-sm font-bold text-yellow-600">OR</span>
+                                                            )}
+                                                        </React.Fragment>
+                                                    ))}
+                                                </div>
                                             </li>
                                         );
                                     })}

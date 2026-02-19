@@ -1,6 +1,64 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 
 const MainSection = () => {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        programme: "",
+        qualification: "",
+        percentage: "",
+        consent: false
+    });
+    const [loading, setLoading] = useState(false);
+    const [status, setStatus] = useState(null);
+
+    const handleChange = (e) => {
+        const { name, value, type, checked } = e.target;
+        setFormData((prev) => ({
+            ...prev,
+            [name]: type === "checkbox" ? checked : value,
+        }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+        setStatus(null);
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setStatus('Application sent successfully!');
+                setFormData({
+                    name: "",
+                    email: "",
+                    phone: "",
+                    programme: "",
+                    qualification: "",
+                    percentage: "",
+                    consent: false
+                });
+            } else {
+                setStatus('Failed to send application. Please try again.');
+            }
+        } catch (error) {
+            console.error('Submission error:', error);
+            setStatus('An error occurred. Please try again later.');
+        } finally {
+            setLoading(false);
+        }
+    };
+
     return (
         <section className="relative min-h-[90vh] w-full overflow-hidden">
             {/* BACKGROUND VIDEO */}
@@ -75,43 +133,97 @@ const MainSection = () => {
                                 <p className="text-sm opacity-90">Get guidance for Law admissions</p>
                             </div>
 
-                            <form className="mt-6 space-y-4 text-gray-400">
-                                <input className="w-full rounded-md border px-4 py-3 text-sm" placeholder="Name*" />
-                                <input className="w-full rounded-md border px-4 py-3 text-sm" placeholder="Email*" />
-                                <input className="w-full rounded-md border px-4 py-3 text-sm" placeholder="Phone*" />
+                            <form className="mt-6 space-y-4 text-gray-400" onSubmit={handleSubmit}>
+                                <input
+                                    name="name"
+                                    value={formData.name}
+                                    onChange={handleChange}
+                                    className="w-full rounded-md border px-4 py-3 text-sm"
+                                    placeholder="Name*"
+                                    required
+                                />
+                                <input
+                                    name="email"
+                                    type="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    className="w-full rounded-md border px-4 py-3 text-sm"
+                                    placeholder="Email*"
+                                    required
+                                />
+                                <input
+                                    name="phone"
+                                    type="tel"
+                                    value={formData.phone}
+                                    onChange={handleChange}
+                                    className="w-full rounded-md border px-4 py-3 text-sm"
+                                    placeholder="Phone*"
+                                    required
+                                />
 
-                                <select className="w-full rounded-md border px-4 py-3 text-sm">
-                                    <option>Select Programme</option>
-                                    <option>LL.B (3 Years)</option>
-                                    <option>B.A. LL.B (5 Years)</option>
+                                <select
+                                    name="programme"
+                                    value={formData.programme}
+                                    onChange={handleChange}
+                                    className="w-full rounded-md border px-4 py-3 text-sm"
+                                    required
+                                >
+                                    <option value="">Select Programme</option>
+                                    <option value="LL.B (3 Years)">LL.B (3 Years)</option>
+                                    <option value="B.A. LL.B (5 Years)">B.A. LL.B (5 Years)</option>
                                 </select>
 
-                                <select className="w-full rounded-md border px-4 py-3 text-sm">
-                                    <option>Qualification</option>
-                                    <option>Graduation Completed</option>
-                                    <option>12th Appearing</option>
-                                    <option>12th Completed</option>
+                                <select
+                                    name="qualification"
+                                    value={formData.qualification}
+                                    onChange={handleChange}
+                                    className="w-full rounded-md border px-4 py-3 text-sm"
+                                    required
+                                >
+                                    <option value="">Qualification</option>
+                                    <option value="Graduation Completed">Graduation Completed</option>
+                                    <option value="12th Appearing">12th Appearing</option>
+                                    <option value="12th Completed">12th Completed</option>
                                 </select>
 
-                                <select className="w-full rounded-md border px-4 py-3 text-sm">
-                                    <option>Percentage</option>
-                                    <option>Above 90%</option>
-                                    <option>75% - 90%</option>
-                                    <option>60% - 75%</option>
-                                    <option>Below 60%</option>
+                                <select
+                                    name="percentage"
+                                    value={formData.percentage}
+                                    onChange={handleChange}
+                                    className="w-full rounded-md border px-4 py-3 text-sm"
+                                    required
+                                >
+                                    <option value="">Percentage</option>
+                                    <option value="Above 90%">Above 90%</option>
+                                    <option value="75% - 90%">75% - 90%</option>
+                                    <option value="60% - 75%">60% - 75%</option>
+                                    <option value="Below 60%">Below 60%</option>
                                 </select>
 
                                 <label className="flex gap-2 text-xs text-gray-600">
-                                    <input type="checkbox" className="mt-1" />I consent to receive
-                                    calls/SMS/WhatsApp/email regarding my enquiry
+                                    <input
+                                        type="checkbox"
+                                        name="consent"
+                                        checked={formData.consent}
+                                        onChange={handleChange}
+                                        className="mt-1"
+                                    />
+                                    I consent to receive calls/SMS/WhatsApp/email regarding my enquiry
                                 </label>
 
                                 <button
                                     type="submit"
-                                    className="w-full rounded-lg bg-yellow-400 py-3 font-semibold text-black transition hover:bg-yellow-500"
+                                    disabled={loading}
+                                    className="w-full rounded-lg bg-yellow-400 py-3 font-semibold text-black transition hover:bg-yellow-500 disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
-                                    Apply for Law Counselling
+                                    {loading ? 'Sending...' : 'Apply for Law Counselling'}
                                 </button>
+
+                                {status && (
+                                    <p className={`text-sm text-center mt-2 ${status.includes('successfully') ? 'text-green-600' : 'text-red-500'}`}>
+                                        {status}
+                                    </p>
+                                )}
                             </form>
                         </div>
                     </div>
