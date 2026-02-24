@@ -34,7 +34,7 @@ export default function HomePage() {
             <ProgrammeOverview />
             <ProgrammeHighlights />
             <WhyUs />
-            <ProgrammeCurriculum />
+            {/* <ProgrammeCurriculum /> */}
             <LawSpecializations />
             <ProgrammeDetails />
             <CampusLife />

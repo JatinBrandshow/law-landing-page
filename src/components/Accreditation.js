@@ -2,9 +2,9 @@ import Image from "next/image";
 import React from "react";
 
 const accreditations = [
-    { src: "/img/accreditations/aicte-logo.webp", alt: "AICTE" },
+    // { src: "/img/accreditations/aicte-logo.webp", alt: "AICTE" },
     { src: "/img/accreditations/ccsu-logo.webp", alt: "CCSU" },
-    { src: "/img/accreditations/iso.webp", alt: "ISO" },
+    // { src: "/img/accreditations/iso.webp", alt: "ISO" },
     { src: "/img/accreditations/naac-logo.webp", alt: "NAAC" },
 ];
 
@@ -12,13 +12,13 @@ const Accreditation = () => {
     return (
         <>
             <section className="py-10">
-                <div className="mx-auto max-w-7xl px-4">
+                <div className="mx-auto max-w-3xl px-4">
                     <div className="rounded-3xl bg-yellow-400 px-8 py-4">
                         {/* Heading */}
                         <h2 className="mb-6 text-3xl font-bold text-primary">Accreditations</h2>
 
                         {/* Logos */}
-                        <div className="grid grid-cols-4 gap-6">
+                        <div className="grid grid-cols-2 gap-6">
                             {accreditations.map((item, index) => (
                                 <div
                                     key={index}
