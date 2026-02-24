@@ -79,7 +79,6 @@ const highlights = [
             "Participation in seminars, moot courts, workshops, conferences, essay competitions, and guest lectures at national and international levels.",
     },
 ];
-
 const ProgrammeHighlights = () => {
     const sliderRef = useRef(null);
 
@@ -115,7 +114,7 @@ const ProgrammeHighlights = () => {
     return (
         <section className="py-6 bg-white">
             <div className="mx-auto max-w-7xl px-6">
-                <h2 className="text-4xl font-bold text-blue-950 font-serif">Programme Highlights</h2>
+                <h2 className="text-4xl font-bold text-primary">Programme Highlights</h2>
 
                 {/* SLIDER */}
                 <div className="relative mt-4">
@@ -130,7 +129,7 @@ const ProgrammeHighlights = () => {
                         {highlights.map((item, index) => {
                             const Icon = item.icon;
                             return (
-                                <div key={index} className="min-w-75 rounded-2xl bg-blue-950 p-6 text-white">
+                                <div key={index} className="min-w-75 rounded-2xl bg-blue-800 p-6 text-white">
                                     <Icon className="h-10 w-10 mb-6" />
                                     <h3 className="text-lg font-semibold mb-3">{item.title}</h3>
                                     <p className="text-sm leading-relaxed text-blue-100">{item.description}</p>
@@ -143,14 +142,14 @@ const ProgrammeHighlights = () => {
                     <div className="mt-4 flex justify-center gap-4">
                         <button
                             onClick={() => scrollByCard("left")}
-                            className="rounded-full border border-blue-950 p-2 text-blue-950 hover:bg-blue-950 hover:text-white transition"
+                            className="rounded-full border border-primary p-2 text-primary hover:bg-primary hover:text-white transition"
                         >
                             <ChevronLeft size={20} />
                         </button>
 
                         <button
                             onClick={() => scrollByCard("right")}
-                            className="rounded-full border border-blue-950 p-2 text-blue-950 hover:bg-blue-950 hover:text-white transition"
+                            className="rounded-full border border-primary p-2 text-primary hover:bg-primary hover:text-white transition"
                         >
                             <ChevronRight size={20} />
                         </button>

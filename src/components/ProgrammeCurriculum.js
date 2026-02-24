@@ -186,7 +186,6 @@ const curriculumData = {
         },
     ],
 };
-
 const ProgrammeCurriculum = () => {
     const [activeTab, setActiveTab] = useState(0);
     const [activeProgram, setActiveProgram] = useState("B.A. LL.B");
@@ -199,7 +198,7 @@ const ProgrammeCurriculum = () => {
                 <div className="mx-auto max-w-7xl px-6">
                     {/* Heading & Program Toggle */}
                     <div className="mb-10 flex flex-col  justify-between gap-6 md:flex-row md:items-center">
-                        <h2 className="text-4xl font-bold text-[#0b1c3f]">Programme Curriculum</h2>
+                        {/* <h2 className="text-4xl font-bold text-[#0b1c3f]">Programme Curriculum</h2> */}
 
                         {/* Program Buttons */}
                         <div className="flex rounded-lg bg-gray-100 p-1">

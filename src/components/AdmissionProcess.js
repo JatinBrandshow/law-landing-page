@@ -64,33 +64,33 @@ const AdmissionProcess = () => {
                         initial={{ opacity: 0, y: 30 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.6 }}
-                        className="mb-8 text-center"
+                        className="mb-16 text-center"
                     >
                         <motion.div
                             initial={{ opacity: 0, scale: 0.5 }}
                             animate={isInView ? { opacity: 1, scale: 1 } : {}}
                             transition={{ duration: 0.5 }}
-                            className="mb-4 inline-block rounded-full bg-linear-to-r from-orange-600 to-red-600 px-6 py-2 text-sm text-white"
+                            className="mb-4 inline-block rounded-full bg-primary px-6 py-2 text-sm text-white"
                         >
                             Join Us
                         </motion.div>
 
                         <h2 className="mb-4 text-4xl md:text-5xl text-gray-900">
                             Admission{" "}
-                            <span className="bg-linear-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
+                            <span className="text-secondary">
                                 Process
                             </span>
                         </h2>
 
                         <p className="mx-auto max-w-3xl text-xl text-gray-600">
-                            Admission to BA.LLB and LL.B programmes is based on academic merit, university guidelines,
+                              Admission to BA.LLB and LL.B programmes is based on academic merit, university guidelines,
                             scores from national or state-level law entrance examinations, and performance in the
                             personal interview.
                         </p>
                     </motion.div>
 
                     {/* Process Steps */}
-                    <div className="mb-4 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+                    <div className="mb-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                         {steps.map((step, index) => (
                             <motion.div
                                 key={index}
@@ -100,7 +100,7 @@ const AdmissionProcess = () => {
                                 className="relative"
                             >
                                 <motion.div
-                                    className="group relative h-full overflow-hidden rounded-3xl bg-white p-5 shadow-xl"
+                                    className="group relative h-full overflow-hidden rounded-3xl bg-white p-8 shadow-xl"
                                     whileHover={{ y: -10, scale: 1.02 }}
                                     transition={{ duration: 0.3 }}
                                 >

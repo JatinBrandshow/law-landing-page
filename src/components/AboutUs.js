@@ -6,48 +6,36 @@ const AboutUs = () => {
         name: "",
         email: "",
         phone: "",
-        programme: "",
+        programme: ""
     });
-
     const [loading, setLoading] = useState(false);
-    const [status, setStatus] = useState(null);
+    const [status, setStatus] = useState("");
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData((prev) => ({
-            ...prev,
-            [name]: value,
-        }));
+        setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
-        setStatus(null);
+        setStatus("");
 
         try {
-            const response = await fetch('/api/counselling', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
             });
 
-            if (response.ok) {
-                setStatus('Application sent successfully!');
-                setFormData({
-                    name: "",
-                    email: "",
-                    phone: "",
-                    programme: "",
-                });
+            if (res.ok) {
+                setStatus("Message sent successfully!");
+                setFormData({ name: "", email: "", phone: "", programme: "" });
             } else {
-                setStatus('Failed to send application. Please try again.');
+                setStatus("Failed to send message. Please try again.");
             }
         } catch (error) {
-            console.error('Submission error:', error);
-            setStatus('An error occurred. Please try again later.');
+            console.error(error);
+            setStatus("An error occurred while sending the message.");
         } finally {
             setLoading(false);
         }
@@ -69,23 +57,24 @@ const AboutUs = () => {
                     {/* LEFT CONTENT */}
                     <div className="w-full lg:w-7/12">
                         {/* Heading */}
-                        <h2 className="text-5xl font-bold text-white mb-4">Accurate College of Law</h2>
-
-                        <p className="text-white/90 leading-relaxed mb-6">
+                        <h2 className="text-5xl font-bold text-white mb-2">Accurate College of Law</h2>
+                        <p className="text-lg text-white/90 leading-relaxed mb-6 text-justify">
                             Accurate College of Law, Greater Noida, is recognized by CCS University Meerut and also
                             approved by the Bar Council of India under section of AERS.
                         </p>
 
-                        <p className="text-white/80 leading-relaxed mb-6">
+                        <p className="text-white/80 leading-relaxed mb-6 text-justify">
                             The college is committed to developing a competitive international environment through
                             global legal consciousness in the community for realization of justice to the masses and the
                             objectives embodied in the Constitution of India.
                         </p>
 
-                        <p className="text-white/80 leading-relaxed">
+                        <p className="text-white/80 leading-relaxed mb-6 text-justify">
                             We have highly educated, globally trained, and experienced national and international
                             faculty members, alongside a motivated and dedicated group of learners.
                         </p>
+
+
                     </div>
 
                     {/* RIGHT FORM (GLASS EFFECT) */}

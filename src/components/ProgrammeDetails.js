@@ -6,7 +6,7 @@ const ProgrammeDetails = () => {
     const [activeTab, setActiveTab] = useState("fit");
 
     return (
-        <section className="bg-white py-14">
+       <section className="bg-white py-14">
             <div className="max-w-350 mx-auto px-6">
                 {/* Tabs */}
                 <div className="grid grid-cols-2 border-b border-gray-300">

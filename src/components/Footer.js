@@ -30,6 +30,7 @@ const Footer = () => {
                                         width={180}
                                         height={60}
                                         className="object-contain mx-auto sm:mx-0"
+                                        unoptimized={true}
                                     />
                                 </div>
                                 <p className="text-sm text-gray-400">Shaping Tomorrow&apos;s Leaders</p>
@@ -80,7 +81,7 @@ const Footer = () => {
                                     </p>
                                 </div>
 
-                                <div className="flex items-center gap-3">
+                                {/* <div className="flex items-center gap-3">
                                     <Phone className="w-5 h-5 text-yellow-400 shrink-0" />
                                     <a
                                         href="tel:+919999999999"
@@ -98,7 +99,7 @@ const Footer = () => {
                                     >
                                         admissions@accurate.in
                                     </a>
-                                </div>
+                                </div> */}
                             </div>
 
                             {/* Social Media */}

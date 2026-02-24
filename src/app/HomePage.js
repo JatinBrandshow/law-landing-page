@@ -6,30 +6,46 @@ import ProgrammeOverview from "@/components/ProgrammeOverview";
 import ProgrammeHighlights from "@/components/ProgrammeHighlights";
 import WhyUs from "@/components/WhyUs";
 import ProgrammeCurriculum from "@/components/ProgrammeCurriculum";
-import BtechSpecializations from "@/components/BtechSpecializations";
 import ProgrammeDetails from "@/components/ProgrammeDetails";
 import AdmissionProcess from "@/components/AdmissionProcess";
 import OurRecruiters from "@/components/OurRecruiters";
 import EligibilityCriteria from "@/components/EligibilityCriteria";
 import FeeStructure from "@/components/FeeStructure";
-import LawCertifications from "@/components/LawCertifications";
+import CampusLife from "@/components/CampusLife";
+import TechLabs from "@/components/TechLabs";
+import LectureHalls from "@/components/LectureHalls";
+import HostelFacilities from "@/components/HostelFacilities";
+import LibrarySection from "@/components/LibrarySection";
+import SportsGallery from "@/components/SportsGallery";
+import LawSpecializations from "@/components/LawSpecializations";
+
+
+
+
+
+
 
 export default function HomePage() {
     return (
         <>
             <MainSection />
             <AboutUs />
-            {/* <Accreditation /> */}
+            <Accreditation />
             <ProgrammeOverview />
             <ProgrammeHighlights />
             <WhyUs />
             <ProgrammeCurriculum />
-            {/* <BtechSpecializations /> */}
-            <LawCertifications />
+            <LawSpecializations />
             <ProgrammeDetails />
+            <CampusLife />
+            <TechLabs />
+            <LectureHalls />
+            <LibrarySection />
+            <SportsGallery />
+            <HostelFacilities />
             <AdmissionProcess />
             <EligibilityCriteria />
-            {/* <OurRecruiters /> */}
+            <OurRecruiters />
             <FeeStructure />
         </>
     );

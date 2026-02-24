@@ -8,8 +8,10 @@ const FeeStructure = () => {
                 backgroundImage: "url('/img/accurate-landing-vector.webp')",
             }}
         >
+            {/* Background decorative elements */}
             <div className="absolute inset-0 bg-white/75 backdrop-blur-[2px]"></div>
 
+            {/* Content wrapper */}
             <div className="relative max-w-7xl mx-auto px-6">
                 {/* Heading */}
                 <div className="text-center mb-14">
@@ -21,6 +23,7 @@ const FeeStructure = () => {
                     </p>
                 </div>
 
+                {/* Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* BA.LLB */}
                     <div className="rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition-all p-8 bg-white">
@@ -39,7 +42,7 @@ const FeeStructure = () => {
                             <p className="text-3xl font-bold text-indigo-600">₹5,25,000</p>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-4">
+                       <div className="grid grid-cols-2 gap-4">
                             <div className="fee-pill">
                                 <span>1st Year</span>
                                 <strong>₹1,25,000</strong>
@@ -80,7 +83,7 @@ const FeeStructure = () => {
                             <p className="text-3xl font-bold text-emerald-600">₹2,65,000</p>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-4">
+                       <div className="grid grid-cols-2 gap-4">
                             <div className="fee-pill">
                                 <span>1st Year</span>
                                 <strong>₹95,000</strong>
@@ -102,6 +105,7 @@ const FeeStructure = () => {
                 </p>
             </div>
 
+            {/* Fee pill style */}
             <style jsx>{`
                 .fee-pill {
                     display: flex;

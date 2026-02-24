@@ -1,64 +1,7 @@
 "use client";
-
-import React, { useState } from "react";
+import React from "react";
 
 const MainSection = () => {
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        phone: "",
-        programme: "",
-        qualification: "",
-        percentage: "",
-        consent: false
-    });
-    const [loading, setLoading] = useState(false);
-    const [status, setStatus] = useState(null);
-
-    const handleChange = (e) => {
-        const { name, value, type, checked } = e.target;
-        setFormData((prev) => ({
-            ...prev,
-            [name]: type === "checkbox" ? checked : value,
-        }));
-    };
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setLoading(true);
-        setStatus(null);
-
-        try {
-            const response = await fetch('/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
-
-            if (response.ok) {
-                setStatus('Application sent successfully!');
-                setFormData({
-                    name: "",
-                    email: "",
-                    phone: "",
-                    programme: "",
-                    qualification: "",
-                    percentage: "",
-                    consent: false
-                });
-            } else {
-                setStatus('Failed to send application. Please try again.');
-            }
-        } catch (error) {
-            console.error('Submission error:', error);
-            setStatus('An error occurred. Please try again later.');
-        } finally {
-            setLoading(false);
-        }
-    };
-
     return (
         <section className="relative min-h-[90vh] w-full overflow-hidden">
             {/* BACKGROUND VIDEO */}
@@ -81,7 +24,7 @@ const MainSection = () => {
                         {/* LEFT CONTENT */}
                         <div className="lg:col-span-2 text-white">
                             <span className="inline-block rounded-full bg-yellow-400 px-4 py-1 text-sm font-semibold text-black">
-                                Admissions Open 2026
+                                Admissions Open
                             </span>
 
                             <h1 className="mt-5 text-4xl md:text-5xl xl:text-6xl font-bold leading-tight">
@@ -97,7 +40,7 @@ const MainSection = () => {
                                 {[
                                     ["Programme Duration", "3 Years (LL.B) / 5 Years (B.A. LL.B)"],
                                     ["Approval", "Bar Council of India (BCI) Approved"],
-                                    ["Programmes Offered", "LL.B & B.A. LL.B"],
+                                    ["Specialisations", "LL.B & B.A. LL.B"],
                                     ["Eligibility", "As per BCI & University Norms"],
                                 ].map(([title, value]) => (
                                     <div
@@ -110,120 +53,72 @@ const MainSection = () => {
                                 ))}
                             </div>
 
-                            {/* ADMISSION INFO */}
-                            <div className="mt-8 max-w-sm overflow-hidden rounded-xl border border-white/20">
-                                <div className="bg-yellow-400 py-3 text-center font-semibold text-black">
-                                    Law Admissions
+                            {/* PLACEMENT SNAPSHOT */}
+                            <div className="mt-10">
+                                <p className="text-sm font-bold uppercase tracking-widest text-yellow-400 mb-4">Placement Snapshot</p>
+                                <div className="grid grid-cols-3 gap-4 max-w-2xl bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10 shadow-2xl">
+                                    <div className="text-center border-r border-white/10 last:border-0 px-2">
+                                        <p className="text-[10px] md:text-xs text-gray-400 font-bold uppercase mb-1">Highest</p>
+                                        <p className="text-xl md:text-3xl font-black text-white">85<span className="text-sm font-medium ml-1">LPA</span></p>
+                                    </div>
+                                    <div className="text-center border-r border-white/10 last:border-0 px-2">
+                                        <p className="text-[10px] md:text-xs text-gray-400 font-bold uppercase mb-1">Average</p>
+                                        <p className="text-xl md:text-3xl font-black text-green-400">6.5<span className="text-sm font-medium ml-1 text-white/70">LPA</span></p>
+                                    </div>
+                                    <div className="text-center border-r border-white/10 last:border-0 px-2">
+                                        <p className="text-[10px] md:text-xs text-gray-400 font-bold uppercase mb-1">Lowest</p>
+                                        <p className="text-xl md:text-3xl font-black text-yellow-400">4.5<span className="text-sm font-medium ml-1 text-white/70">LPA</span></p>
+                                    </div>
                                 </div>
-                                <a
-                                    href="https://law.accurate.in/law-admissions/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="block w-full bg-white py-3 text-center font-bold text-gray-900 transition-all hover:bg-gray-50 hover:text-blue-900 uppercase tracking-widest text-sm"
-                                >
-                                    Apply Now
-                                </a>
                             </div>
                         </div>
 
                         {/* RIGHT FORM */}
                         <div className="rounded-2xl bg-white p-3 shadow-2xl">
-                            <div className="rounded-xl bg-green-700 p-2 text-white">
+                            <div className="rounded-xl bg-green-600 p-2 text-white">
                                 <h3 className="text-xl font-semibold">Talk To Our Law Expert</h3>
                                 <p className="text-sm opacity-90">Get guidance for Law admissions</p>
                             </div>
 
-                            <form className="mt-6 space-y-4 text-gray-400" onSubmit={handleSubmit}>
-                                <input
-                                    name="name"
-                                    value={formData.name}
-                                    onChange={handleChange}
-                                    className="w-full rounded-md border px-4 py-3 text-sm"
-                                    placeholder="Name*"
-                                    required
-                                />
-                                <input
-                                    name="email"
-                                    type="email"
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                    className="w-full rounded-md border px-4 py-3 text-sm"
-                                    placeholder="Email*"
-                                    required
-                                />
-                                <input
-                                    name="phone"
-                                    type="tel"
-                                    value={formData.phone}
-                                    onChange={handleChange}
-                                    className="w-full rounded-md border px-4 py-3 text-sm"
-                                    placeholder="Phone*"
-                                    required
-                                />
+                            <form className="mt-6 space-y-4 text-gray-400">
+                                <input className="w-full rounded-md border px-4 py-3 text-sm" placeholder="Name*" />
+                                <input className="w-full rounded-md border px-4 py-3 text-sm" placeholder="Email*" />
+                                <input className="w-full rounded-md border px-4 py-3 text-sm" placeholder="Phone*" />
 
-                                <select
-                                    name="programme"
-                                    value={formData.programme}
-                                    onChange={handleChange}
-                                    className="w-full rounded-md border px-4 py-3 text-sm"
-                                    required
-                                >
-                                    <option value="">Select Programme</option>
-                                    <option value="LL.B (3 Years)">LL.B (3 Years)</option>
-                                    <option value="B.A. LL.B (5 Years)">B.A. LL.B (5 Years)</option>
+                                <select className="w-full rounded-md border px-4 py-3 text-sm">
+                                    <option>Select Law Branch</option>
+                                    <option>B.A. LL.B (5 Years)</option>
+                                    <option>LL.B (3 Years)</option>
+                                    {/* <option>Civil Engineering</option> */}
+                                    
                                 </select>
 
-                                <select
-                                    name="qualification"
-                                    value={formData.qualification}
-                                    onChange={handleChange}
-                                    className="w-full rounded-md border px-4 py-3 text-sm"
-                                    required
-                                >
-                                    <option value="">Qualification</option>
-                                    <option value="Graduation Completed">Graduation Completed</option>
-                                    <option value="12th Appearing">12th Appearing</option>
-                                    <option value="12th Completed">12th Completed</option>
+                                <select className="w-full rounded-md border px-4 py-3 text-sm">
+                                   <option>Qualification</option>
+                                    <option>Graduation Completed</option>
+                                    <option>12th Appearing</option>
+                                    <option>12th Completed</option>
                                 </select>
 
-                                <select
-                                    name="percentage"
-                                    value={formData.percentage}
-                                    onChange={handleChange}
-                                    className="w-full rounded-md border px-4 py-3 text-sm"
-                                    required
-                                >
-                                    <option value="">Percentage</option>
-                                    <option value="Above 90%">Above 90%</option>
-                                    <option value="75% - 90%">75% - 90%</option>
-                                    <option value="60% - 75%">60% - 75%</option>
-                                    <option value="Below 60%">Below 60%</option>
+                                <select className="w-full rounded-md border px-4 py-3 text-sm">
+                                    <option>Percentage</option>
+                                    <option>Above 90%</option>
+                                    <option>75% - 90%</option>
+                                    <option>60% - 75%</option>
+                                    <option>Below 60%</option>
                                 </select>
 
                                 <label className="flex gap-2 text-xs text-gray-600">
-                                    <input
-                                        type="checkbox"
-                                        name="consent"
-                                        checked={formData.consent}
-                                        onChange={handleChange}
-                                        className="mt-1"
-                                    />
-                                    I consent to receive calls/SMS/WhatsApp/email regarding my enquiry
+                                    <input type="checkbox" className="mt-1" />I consent to receive
+                                    calls/SMS/WhatsApp/email regarding my enquiry
                                 </label>
 
                                 <button
                                     type="submit"
-                                    disabled={loading}
-                                    className="w-full rounded-lg bg-yellow-400 py-3 font-semibold text-black transition hover:bg-yellow-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                                    className="w-full rounded-lg bg-yellow-400 py-3 font-semibold text-black transition hover:bg-yellow-500"
                                 >
-                                    {loading ? 'Sending...' : 'Apply for Law Counselling'}
+                                    Apply
                                 </button>
-
-                                {status && (
-                                    <p className={`text-sm text-center mt-2 ${status.includes('successfully') ? 'text-green-600' : 'text-red-500'}`}>
-                                        {status}
-                                    </p>
-                                )}
                             </form>
                         </div>
                     </div>

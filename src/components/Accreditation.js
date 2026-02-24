@@ -15,7 +15,7 @@ const Accreditation = () => {
                 <div className="mx-auto max-w-7xl px-4">
                     <div className="rounded-3xl bg-yellow-400 px-8 py-4">
                         {/* Heading */}
-                        <h2 className="mb-6 text-3xl font-bold text-blue-950">Accreditations</h2>
+                        <h2 className="mb-6 text-3xl font-bold text-primary">Accreditations</h2>
 
                         {/* Logos */}
                         <div className="grid grid-cols-4 gap-6">

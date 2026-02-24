@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
     Award,
@@ -66,7 +67,6 @@ const features = [
             "In line with the Beti Bachao, Beti Padhao initiative, exclusive scholarships are offered to support and empower female students in the legal profession.",
     },
 ];
-
 const WhyUs = () => {
     return (
         <section className="bg-yellow-100 py-16">

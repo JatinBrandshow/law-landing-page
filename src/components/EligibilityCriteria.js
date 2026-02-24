@@ -44,13 +44,13 @@ const EligibilityCriteria = () => {
 
                         {/* CONTENT */}
                         <div className="grid md:grid-cols-2 gap-8 text-sm text-gray-200">
-                            {/* BALLB ENTRY */}
+                            {/* B.A. LL.B*/}
                             {activeTab === "ballb" && (
                                 <>
                                     <div className="flex gap-4 md:col-span-2">
                                         <span className="w-3 h-3 mt-2 rounded-full bg-blue-500 shrink-0"></span>
                                         <p>
-                                            Candidates must have passed Class 12 (10+2) from a recognized board in any
+                                             Candidates must have passed Class 12 (10+2) from a recognized board in any
                                             stream.
                                         </p>
                                     </div>
@@ -66,7 +66,7 @@ const EligibilityCriteria = () => {
                                     <div className="flex gap-4">
                                         <span className="w-3 h-3 mt-2 rounded-full bg-blue-500 shrink-0"></span>
                                         <p>
-                                            Candidates should meet eligibility norms prescribed by CCS University and
+                                              Candidates should meet eligibility norms prescribed by CCS University and
                                             Bar Council of India (BCI).
                                         </p>
                                     </div>
@@ -74,20 +74,20 @@ const EligibilityCriteria = () => {
                                     <div className="flex gap-4 md:col-span-2">
                                         <span className="w-3 h-3 mt-2 rounded-full bg-blue-500 shrink-0"></span>
                                         <p>
-                                            Admission may be based on merit, entrance criteria, or university
+                                             Admission may be based on merit, entrance criteria, or university
                                             guidelines.
                                         </p>
                                     </div>
                                 </>
                             )}
 
-                            {/* LLB ENTRY */}
+                            {/* LLB*/}
                             {activeTab === "llb" && (
                                 <>
                                     <div className="flex gap-4">
                                         <span className="w-3 h-3 mt-2 rounded-full bg-blue-500 shrink-0"></span>
                                         <p>
-                                            Candidates must have completed graduation in any discipline from a
+                                           Candidates must have completed graduation in any discipline from a
                                             recognized university.
                                         </p>
                                     </div>
@@ -108,10 +108,10 @@ const EligibilityCriteria = () => {
                                         </p>
                                     </div>
 
-                                    <div className="flex gap-4 md:col-span-2">
+                                      <div className="flex gap-4 md:col-span-2">
                                         <span className="w-3 h-3 mt-2 rounded-full bg-blue-500 shrink-0"></span>
                                         <p>
-                                            Admission is subject to document verification and university admission
+                                             Admission is subject to document verification and university admission
                                             policies.
                                         </p>
                                     </div>
@@ -125,18 +125,12 @@ const EligibilityCriteria = () => {
                         <div>
                             <h3 className="text-3xl font-bold mb-4">Start Your Journey</h3>
                             <p className="text-blue-100 text-sm leading-relaxed">
-                                Begin your journey toward a rewarding career in law with our B.A. LL.B. and LL.B. programs. Our admissions team is ready to assist you at every step.
+                                  Begin your journey toward a rewarding career in law with our B.A. LL.B. and LL.B. programs. Our admissions team is ready to assist you at every step.
                             </p>
                         </div>
 
-                        <button >
-                            <a href="https://law.accurate.in/law-admissions/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="block w-full bg-white py-4 text-center font-bold text-blue-600 transition-all hover:bg-gray-50 hover:text-blue-900 uppercase tracking-widest rounded-full text-sm"
-                                >
-                                    Apply Online Now
-                                </a>
+                        <button className="mt-10 bg-white text-blue-600 font-semibold py-4 rounded-full hover:bg-blue-50 transition">
+                            Apply Online Now
                         </button>
                     </div>
                 </div>
@@ -146,4 +140,3 @@ const EligibilityCriteria = () => {
 };
 
 export default EligibilityCriteria;
-    

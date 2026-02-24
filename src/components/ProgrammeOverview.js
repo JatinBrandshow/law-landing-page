@@ -2,7 +2,8 @@ import React from "react";
 
 const ProgrammeOverview = () => {
     return (
-        <section className="py-12 bg-white">
+        <>
+            <section className="py-12 bg-white">
             <div className="mx-auto max-w-7xl px-6">
                 
                 <h2 className="text-4xl font-bold text-blue-950 font-serif text-center">
@@ -74,6 +75,7 @@ const ProgrammeOverview = () => {
                 </div>
             </div>
         </section>
+        </>
     );
 };
 

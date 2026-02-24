@@ -19,12 +19,13 @@ const Header = () => {
                             width={320}
                             height={60}
                             className="object-contain cursor-pointer max-sm:w-40"
+                            unoptimized={true}
                         />
                     </Link>
 
                     {/* Accreditation Logos (visible on all screens now) */}
                     <div className="flex items-center gap-3">
-                       
+
                         <Image
                             src="/img/accreditations/ccsu-logo.webp"
                             alt="CCSU Logo"
@@ -43,14 +44,14 @@ const Header = () => {
                 </div>
 
                 {/* Desktop Contact Info */}
-                <div className="hidden md:flex text-right text-base leading-tight text-black gap-5">
+                {/* <div className="hidden md:flex text-right text-base leading-tight text-black gap-5">
                     <p>
                         <strong>Phone:</strong> +91-98995 69090
                     </p>
                     <p>
                         <strong>Email:</strong> admissions@accurate.in
                     </p>
-                </div>
+                </div> */}
 
                 {/* Hamburger Icon for Mobile */}
                 <button className="md:hidden flex flex-col gap-1" onClick={() => setOpen(!open)}>
@@ -61,7 +62,7 @@ const Header = () => {
             </div>
 
             {/* Mobile Dropdown Menu */}
-            {open && (
+            {/* {open && (
                 <div className="md:hidden bg-white px-6 py-3 shadow-inner border-t">
                     <div className="flex flex-wrap items-center gap-2 text-sm text-black">
                         <span>
@@ -73,7 +74,7 @@ const Header = () => {
                         </span>
                     </div>
                 </div>
-            )}
+            )} */}
         </header>
     );
 };
